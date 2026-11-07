@@ -1,0 +1,13 @@
+{
+  "name": "sazumi-viki-absurd-portfolio",
+  "version": "0.0.0-error",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
+

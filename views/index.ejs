@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sazumi Viki :: Official Enterprise Portfolio v1.0 (1998 Edition)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes NIBIKIBI_KEDIP_PARAH {
+      0%, 49% { opacity: 1; background-color: #8b8000; color: #00ff00; }
+      50%, 100% { opacity: 0.25; background-color: #4a3b00; color: #ff00ff; }
+    }
+    @keyframes NIBIKIBI_MELAR_MENJIJIKKAN {
+      0% { transform: scale(1, 1) skew(0deg, 0deg); }
+      33% { transform: scale(1.08, 0.82) skew(8deg, -4deg); }
+      66% { transform: scale(0.88, 1.15) skew(-10deg, 6deg); }
+      100% { transform: scale(1, 1) skew(0deg, 0deg); }
+    }
+    @keyframes NIBIKIBI_GOYANG_JADUL {
+      0% { transform: translate(0px, 0px) rotate(0deg); }
+      25% { transform: translate(7px, -5px) rotate(2deg); }
+      50% { transform: translate(-8px, 6px) rotate(-3deg); }
+      75% { transform: translate(5px, 4px) rotate(1deg); }
+      100% { transform: translate(0px, 0px) rotate(0deg); }
+    }
+    body {
+      background-color: #6b7021;
+      background-image:
+        repeating-linear-gradient(45deg, rgba(92, 64, 24, 0.45) 0px, rgba(92, 64, 24, 0.45) 14px, rgba(168, 184, 32, 0.45) 14px, rgba(168, 184, 32, 0.45) 28px),
+        radial-gradient(circle at 30% 40%, #b5a61d 0%, #4f3b10 60%, #2e3809 100%);
+      font-family: "Times New Roman", "Courier New", serif;
+      color: #1f1400;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+    .NIBIKIBI_BORDER_JADUL {
+      border: 9px ridge #a89f3c;
+      background-color: #c2b878;
+      box-shadow: 12px 12px 0px #2b2405, -6px -6px 0px #e8ff00;
+    }
+    .NIBIKIBI_TABEL_BUSUK {
+      border: 7px groove #ff00aa;
+      background-color: #8f993d;
+    }
+    .NIBIKIBI_TOMBOL_98 {
+      border-top: 5px solid #ffffff;
+      border-left: 5px solid #ffffff;
+      border-right: 5px solid #2b2b2b;
+      border-bottom: 5px solid #2b2b2b;
+      background-color: #b8b496;
+      color: #000080;
+      font-family: "Courier New", monospace;
+      font-weight: bold;
+    }
+    .NIBIKIBI_TOMBOL_98:active {
+      border-top: 5px solid #2b2b2b;
+      border-left: 5px solid #2b2b2b;
+      border-right: 5px solid #ffffff;
+      border-bottom: 5px solid #ffffff;
+    }
+    .NIBIKIBI_KEDIP {
+      animation: NIBIKIBI_KEDIP_PARAH 0.7s infinite;
+    }
+    .NIBIKIBI_MELAR {
+      animation: NIBIKIBI_MELAR_MENJIJIKKAN 2.2s infinite;
+    }
+    .NIBIKIBI_GETAR_TERUS {
+      animation: NIBIKIBI_GOYANG_JADUL 0.16s infinite;
+    }
+  </style>
+</head>
+<body id="NIBIKIBI_BODY" class="p-2 min-h-screen select-none">
+
+  <div id="NIBIKIBI_JEJAK_KURSOR" class="fixed inset-0 pointer-events-none z-50"></div>
+
+  <div class="bg-[#000080] text-[#ffff00] border-4 border-double border-[#00ff00] p-1 font-mono text-sm">
+    <marquee scrollamount="14" scrolldelay="20">
+      *** SELAMAT DATANG DI PORTAL RESMI SAZUMI VIKI — SENIOR FULL-STACK ENGINEER & CLOUD SYSTEM ARCHITECT — OPTIMIZED FOR INTERNET EXPLORER 4.0 RESOLUSI 640x480 — SERTIFIKASI ISO-9001 ENTERPRISE ***
+    </marquee>
+  </div>
+
+  <table id="NIBIKIBI_NAVBAR" class="w-full NIBIKIBI_BORDER_JADUL mt-2 border-collapse">
+    <tr>
+      <td class="p-3 bg-[#4f4716] text-[#d9ff00] border-4 border-inset border-[#998c2e]" onclick="NIBIKIBI_LOGO_BUG(this)">
+        <span class="text-2xl font-black tracking-widest underline decoration-double">[SV_CORP_1998]</span>
+        <span id="NIBIKIBI_TEKS_NAMA_NAV" class="text-lg ml-2 bg-[#ff0055] text-white px-2"><%= NIBIKIBI_DATA.NIBIKIBI_NAMA %></span>
+      </td>
+      <td id="NIBIKIBI_MENU_LIST" class="p-2 bg-[#9e9442] text-center space-x-3">
+        <a href="#profil" onclick="NIBIKIBI_MENU_ACAK(event, this)" class="NIBIKIBI_TOMBOL_98 px-3 py-1 inline-block underline">01. Profil Eksekutif</a>
+        <a href="#keahlian" onclick="NIBIKIBI_MENU_ACAK(event, this)" class="NIBIKIBI_TOMBOL_98 px-3 py-1 inline-block underline">02. Kompetensi Teknis</a>
+        <a href="#sertifikasi" onclick="NIBIKIBI_MENU_ACAK(event, this)" class="NIBIKIBI_TOMBOL_98 px-3 py-1 inline-block underline">03. Lisensi Resmi</a>
+        <a href="#proyek" onclick="NIBIKIBI_MENU_ACAK(event, this)" class="NIBIKIBI_TOMBOL_98 px-3 py-1 inline-block underline">04. Studi Kasus</a>
+        <a href="#kontak" onclick="NIBIKIBI_MENU_ACAK(event, this)" class="NIBIKIBI_TOMBOL_98 px-3 py-1 inline-block underline">05. Hubungi Kami</a>
+      </td>
+      <td class="p-2 bg-[#5c3c10] text-right space-x-1">
+        <button onclick="NIBIKIBI_KALIBRASI_FONT()" class="NIBIKIBI_TOMBOL_98 px-2 py-1 text-xs">Resolusi Teks</button>
+        <button onclick="NIBIKIBI_GANTI_TEMA()" class="NIBIKIBI_TOMBOL_98 px-2 py-1 text-xs bg-[#00ffaa]">Mode Layar</button>
+      </td>
+    </tr>
+  </table>
+
+  <div class="max-w-6xl mx-auto mt-4 space-y-6">
+
+    <div id="NIBIKIBI_SEC_HERO" class="NIBIKIBI_BORDER_JADUL p-5 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+      <div class="md:col-span-2 space-y-3 bg-[#ada35e] p-4 border-4 border-inset border-[#59521c]">
+        <div id="NIBIKIBI_BADGE_STATUS" class="inline-block px-3 py-1 NIBIKIBI_KEDIP font-mono text-xs font-bold border-2 border-black">
+          STATUS SERVER: TERSEDIA UNTUK KONSULTASI ARSITEKTUR SISTEM
+        </div>
+        <h1 id="NIBIKIBI_TEKS_NAMA" class="text-4xl md:text-5xl font-black text-[#2b0938] bg-[#d4ff00] p-2 border-4 border-dotted border-[#ff0000] inline-block">
+          <%= NIBIKIBI_DATA.NIBIKIBI_NAMA %>
+        </h1>
+        <h2 id="NIBIKIBI_TEKS_ROLE" class="text-xl font-bold text-[#000080] bg-[#e0c879] p-1 underline">
+          <%= NIBIKIBI_DATA.NIBIKIBI_ROLE %>
+        </h2>
+        <p id="NIBIKIBI_TEKS_BIO" class="text-sm leading-6 bg-[#787032] text-[#ffffcc] p-3 border-2 border-[#3b3609] font-mono">
+          <%= NIBIKIBI_DATA.NIBIKIBI_BIO %>
+        </p>
+
+        <div class="pt-3 flex flex-wrap gap-3">
+          <button id="NIBIKIBI_BTN_UTAMA" class="NIBIKIBI_TOMBOL_98 px-5 py-3 text-base bg-[#ffff00] text-[#ff0000]">
+            [Jadwalkan Konsultasi Teknis]
+          </button>
+          <button id="NIBIKIBI_BTN_CV" onclick="NIBIKIBI_PROSES_CV()" class="NIBIKIBI_TOMBOL_98 px-5 py-3 text-base">
+            [Unduh Dokumen CV (.PDF)]
+          </button>
+          <button onclick="NIBIKIBI_SALIN_EMAIL()" class="NIBIKIBI_TOMBOL_98 px-4 py-3 text-sm bg-[#ff9900]">
+            [Salin Kontak Resmi]
+          </button>
+        </div>
+
+        <div id="NIBIKIBI_WRAP_CV" class="hidden pt-3 bg-[#3d3812] p-3 border-4 border-inset border-black text-[#00ff00] font-mono">
+          <div class="flex justify-between text-xs mb-1">
+            <span id="NIBIKIBI_STATUS_CV">Mentransfer berkas Sazumi_Viki_Resume.pdf...</span>
+            <span id="NIBIKIBI_ANGKA_CV">0%</span>
+          </div>
+          <div class="w-full h-6 bg-black border-2 border-[#00ff00] p-0.5">
+            <div id="NIBIKIBI_BAR_CV" class="h-full bg-[#ff00aa]" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="NIBIKIBI_KARTU_PROFIL" onmouseenter="NIBIKIBI_GESER_KARTU(this)" class="NIBIKIBI_TABEL_BUSUK p-4 space-y-3 NIBIKIBI_MELAR">
+        <div class="bg-[#000080] text-white px-2 py-1 font-mono text-xs font-bold flex justify-between">
+          <span>STATISTIK_KINERJA.EXE</span>
+          <span>[X]</span>
+        </div>
+        <div class="text-center bg-[#6e6622] p-3 border-4 border-inset border-[#403a0c]">
+          <div class="w-24 h-24 mx-auto bg-[#99004d] text-[#00ff00] border-4 border-dashed border-yellow-300 flex items-center justify-center font-mono text-xs p-2">
+            [FOTO PROFIL GAGAL DIMUAT: ERR_403]
+          </div>
+          <p class="text-xs font-mono text-yellow-200 mt-2">Pengunjung Ke: <span class="bg-black text-lime-400 px-1">0000001</span></p>
+        </div>
+        <table class="w-full border-4 border-collapse border-black bg-[#b5ab5c] text-xs font-mono">
+          <tr>
+            <td class="border-2 border-black p-2" onclick="NIBIKIBI_METRIK_RUSAK(this)">
+              <b>99.9%</b><br>Reliabilitas Server
+            </td>
+            <td class="border-2 border-black p-2" onclick="NIBIKIBI_METRIK_RUSAK(this)">
+              <b>120+</b><br>Arsitektur Dirilis
+            </td>
+          </tr>
+          <tr>
+            <td class="border-2 border-black p-2" onclick="NIBIKIBI_METRIK_RUSAK(this)">
+              <b>0.00</b><br>Insiden Sistem
+            </td>
+            <td class="border-2 border-black p-2" onclick="NIBIKIBI_METRIK_RUSAK(this)">
+              <b>24/7</b><br>Dukungan Operasional
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="NIBIKIBI_BORDER_JADUL p-4 space-y-3">
+        <div class="bg-[#4a1230] text-[#00ffff] p-2 font-mono font-bold text-base border-2 border-white">
+          :: MATRIKS KOMPETENSI TEKNIS & KEAHLIAN ::
+        </div>
+        <p class="text-xs font-mono bg-[#dfd68c] p-1 border border-black">Klik baris kompetensi untuk memverifikasi parameter keahlian.</p>
+        <div class="space-y-3">
+          <% NIBIKIBI_DATA.NIBIKIBI_SKILLS.forEach(function(NIBIKIBI_ITEM) { %>
+            <div onclick="NIBIKIBI_SKILL_BOCOR(this)" onmouseenter="NIBIKIBI_SKILL_GOYANG(this)" class="p-2 bg-[#8c843b] border-4 border-outset border-[#d1c76b] cursor-pointer">
+              <div class="flex justify-between text-xs font-mono font-bold text-[#ffff99] mb-1">
+                <span class="NIBIKIBI_NAMA_SKILL"><%= NIBIKIBI_ITEM.NIBIKIBI_SKILL %></span>
+                <span class="NIBIKIBI_PERSEN_SKILL bg-black text-[#00ff00] px-1"><%= NIBIKIBI_ITEM.NIBIKIBI_LEVEL %></span>
+              </div>
+              <div class="w-full bg-[#2b280b] h-4 border-2 border-inset border-black overflow-hidden">
+                <div class="NIBIKIBI_FILL_SKILL bg-gradient-to-r from-[#00ff00] via-[#ffff00] to-[#ff0000] h-full" style="width: <%= NIBIKIBI_ITEM.NIBIKIBI_LEVEL %>"></div>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+
+      <div class="NIBIKIBI_BORDER_JADUL p-4 space-y-3 bg-[#9c8c44]">
+        <div class="bg-[#123d14] text-[#ffff00] p-2 font-mono font-bold text-base border-2 border-[#ff00aa]">
+          :: SIMULATOR ESTIMASI ANGGARAN PROYEK ::
+        </div>
+        <p class="text-xs font-mono text-black bg-[#d4ca77] p-2 border border-black">
+          Masukkan jumlah modul dan durasi pengerjaan untuk menghitung estimasi investasi pengembangan.
+        </p>
+        <div class="space-y-3 font-mono text-xs">
+          <div class="bg-[#786d26] p-2 border-2 border-black text-white">
+            <label class="block font-bold mb-1">JUMLAH MODUL SISTEM:</label>
+            <input id="NIBIKIBI_CALC_1" type="number" value="5" oninput="NIBIKIBI_ACAK_ANGKA(this)" class="w-full p-2 bg-[#ffff99] text-black border-4 border-inset border-gray-600 font-bold">
+          </div>
+          <div class="bg-[#786d26] p-2 border-2 border-black text-white">
+            <label class="block font-bold mb-1">DURASI IMPLEMENTASI (MINGGU):</label>
+            <input id="NIBIKIBI_CALC_2" type="number" value="4" oninput="NIBIKIBI_ACAK_ANGKA(this)" class="w-full p-2 bg-[#ffff99] text-black border-4 border-inset border-gray-600 font-bold">
+          </div>
+          <button onclick="NIBIKIBI_HITUNG_ESTIMASI()" class="NIBIKIBI_TOMBOL_98 w-full py-3 text-sm bg-[#00ff00] text-black">
+            [KALKULASI ANGGARAN SEKARANG]
+          </button>
+          <div id="NIBIKIBI_HASIL_ESTIMASI" class="p-3 bg-black text-[#00ff00] border-4 border-double border-[#ffff00] font-bold text-center">
+            Total Estimasi: Rp 15.000.000,-
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="NIBIKIBI_BORDER_JADUL p-4 space-y-4">
+      <div class="flex justify-between items-center bg-[#3b2308] text-[#ffcc00] p-2 border-2 border-[#00ffff]">
+        <div class="font-mono font-bold">:: SERTIFIKASI & LISENSI PROFESIONAL RESMI ::</div>
+        <button onclick="NIBIKIBI_RESET_TATA_LETAK()" class="NIBIKIBI_TOMBOL_98 px-3 py-1 text-xs">
+          [Kalibrasi Ulang Tata Letak]
+        </button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <% NIBIKIBI_DATA.NIBIKIBI_SERTIFIKAT.forEach(function(NIBIKIBI_CERT) { %>
+          <div onclick="NIBIKIBI_SERTIF_PALSU(this)" class="p-3 bg-[#b3a84c] border-4 border-groove border-[#ff0055] cursor-pointer space-y-1 font-mono">
+            <div class="text-xs bg-[#000080] text-white px-1 inline-block"><%= NIBIKIBI_CERT.NIBIKIBI_PENERBIT %> (<%= NIBIKIBI_CERT.NIBIKIBI_TAHUN %>)</div>
+            <div class="NIBIKIBI_JUDUL_SERTIF font-bold text-sm text-[#2b0033] underline"><%= NIBIKIBI_CERT.NIBIKIBI_NAMA_SERTIF %></div>
+            <div class="NIBIKIBI_KODE_SERTIF text-xs text-black bg-[#e8ff78] px-1">No. Reg: <%= NIBIKIBI_CERT.NIBIKIBI_KODE %></div>
+            <div class="pt-1">
+              <span class="text-[11px] bg-[#00ff00] text-black font-bold px-2 border border-black">STATUS: VALID</span>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+
+    <div class="NIBIKIBI_BORDER_JADUL p-4 space-y-4">
+      <div class="bg-[#004d40] text-[#ffff00] p-2 font-mono font-bold border-2 border-lime-400">
+        :: DOKUMENTASI PROYEK & INFRASTRUKTUR ENTERPRISE ::
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <% NIBIKIBI_DATA.NIBIKIBI_PROJECTS.forEach(function(NIBIKIBI_PROJ) { %>
+          <div class="NIBIKIBI_KARTU_PROYEK NIBIKIBI_TABEL_BUSUK p-4 flex flex-col justify-between space-y-3">
+            <div class="space-y-2">
+              <span class="inline-block text-xs font-mono font-bold px-2 py-0.5 bg-[#ff0000] text-[#ffff00] border border-white">
+                [<%= NIBIKIBI_PROJ.NIBIKIBI_STATUS %>]
+              </span>
+              <h3 class="text-base font-black text-[#000066] bg-[#d9ff66] p-1 border border-black"><%= NIBIKIBI_PROJ.NIBIKIBI_JUDUL %></h3>
+              <p class="text-xs font-mono text-black bg-[#c7bd73] p-2 border-2 border-inset border-[#635c24]"><%= NIBIKIBI_PROJ.NIBIKIBI_DESC %></p>
+            </div>
+            <div class="pt-2 flex gap-2">
+              <button onclick="NIBIKIBI_KLIK_PROYEK(this)" class="NIBIKIBI_TOMBOL_98 flex-1 py-2 px-2 text-xs">
+                Buka Dokumen
+              </button>
+              <button onclick="NIBIKIBI_KLIK_DEMO(this)" class="NIBIKIBI_TOMBOL_98 py-2 px-2 text-xs bg-[#00ffff]">
+                Uji Sistem
+              </button>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="NIBIKIBI_BORDER_JADUL p-4 space-y-3">
+        <div class="bg-[#5c001f] text-[#00ffaa] p-2 font-mono font-bold border-2 border-yellow-300">
+          :: FORMULIR PENGAJUAN KERJA SAMA RESMI ::
+        </div>
+        <p class="text-xs font-mono bg-[#d6cc7c] p-2 border border-black">
+          Harap isi seluruh kolom di bawah ini dengan informasi korporasi yang valid.
+        </p>
+
+        <form id="NIBIKIBI_FORM_KONTAK" class="space-y-3 font-mono text-xs">
+          <div class="bg-[#857b35] p-2 border-2 border-black">
+            <label class="block font-bold text-[#ffff99] mb-1">NAMA LENGKAP PEMOHON:</label>
+            <input type="text" id="NIBIKIBI_IN_NAMA" placeholder="Ketik nama lengkap..." class="w-full p-2 bg-[#ffffcc] text-black border-4 border-inset border-black font-bold" required>
+          </div>
+          <div class="bg-[#857b35] p-2 border-2 border-black">
+            <label class="block font-bold text-[#ffff99] mb-1">ALAMAT EMAIL KORPORASI:</label>
+            <input type="text" id="NIBIKIBI_IN_EMAIL" placeholder="nama@perusahaan.co.id" class="w-full p-2 bg-[#ffffcc] text-black border-4 border-inset border-black font-bold" required>
+          </div>
+          <div class="bg-[#857b35] p-2 border-2 border-black">
+            <label class="block font-bold text-[#ffff99] mb-1">RINCIAN KEBUTUHAN SISTEM:</label>
+            <textarea id="NIBIKIBI_IN_PESAN" rows="3" placeholder="Uraikan spesifikasi proyek..." class="w-full p-2 bg-[#ffffcc] text-black border-4 border-inset border-black font-bold" required></textarea>
+          </div>
+
+          <div id="NIBIKIBI_BOX_CAPTCHA" class="p-3 bg-[#bfb458] border-4 border-groove border-[#000080] flex items-center justify-between">
+            <label class="flex items-center gap-2 font-bold text-black cursor-pointer">
+              <input type="checkbox" id="NIBIKIBI_CEK_ROBOT" onclick="NIBIKIBI_CAPTCHA_ERROR(this)" class="w-5 h-5">
+              <span id="NIBIKIBI_TEKS_ROBOT">Konfirmasi Verifikasi Biometrik Manusia</span>
+            </label>
+            <span class="text-[10px] bg-black text-lime-400 px-1">SEC-v1.2</span>
+          </div>
+
+          <div id="NIBIKIBI_WRAP_BTN_FORM" class="flex gap-2 pt-2">
+            <button type="submit" id="NIBIKIBI_BTN_SUBMIT" onmouseenter="NIBIKIBI_TUKAR_TOMBOL()" class="NIBIKIBI_TOMBOL_98 flex-1 py-3 bg-[#00ff00] text-black">
+              [KIRIM BERKAS PENGAJUAN]
+            </button>
+            <button type="button" id="NIBIKIBI_BTN_RESET" onclick="NIBIKIBI_RESET_PALSU()" class="NIBIKIBI_TOMBOL_98 px-4 py-3 bg-[#ff0055] text-white">
+              [KOSONGKAN FORM]
+            </button>
+          </div>
+        </form>
+
+        <div id="NIBIKIBI_RESPON_FORM" class="hidden p-3 bg-[#ff0000] text-[#ffff00] border-4 border-double border-white font-mono text-xs font-bold"></div>
+      </div>
+
+      <div class="NIBIKIBI_BORDER_JADUL p-4 flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="bg-[#000080] text-[#ffff00] p-2 font-mono font-bold border-2 border-white flex justify-between">
+            <span>:: TERMINAL KONSULTASI VIRTUAL SAZUMI ::</span>
+            <span class="bg-[#00ff00] text-black px-1 text-xs">ONLINE</span>
+          </div>
+          <div id="NIBIKIBI_AREA_CHAT" class="h-48 overflow-y-auto p-3 bg-black text-[#00ff00] border-4 border-inset border-gray-500 font-mono text-xs space-y-2">
+            <div>&gt; Sistem siap. Silakan ketik pertanyaan teknis Anda kepada asisten Sazumi Viki.</div>
+          </div>
+          <div class="flex gap-2 font-mono">
+            <input id="NIBIKIBI_IN_CHAT" type="text" placeholder="Ketik perintah atau pertanyaan..." class="flex-1 p-2 bg-[#ffffcc] text-black border-4 border-inset border-black text-xs font-bold">
+            <button onclick="NIBIKIBI_KIRIM_CHAT()" class="NIBIKIBI_TOMBOL_98 px-4 py-2 text-xs">
+              [EKSEKUSI]
+            </button>
+          </div>
+        </div>
+
+        <div class="space-y-2 pt-3 border-t-4 border-dashed border-[#4a4211] font-mono">
+          <div class="text-xs font-bold bg-[#332d06] text-[#ffff00] px-2 py-1">:: REKOMENDASI EKSEKUTIF & KLIEN ::</div>
+          <% NIBIKIBI_DATA.NIBIKIBI_TESTIMONI.forEach(function(NIBIKIBI_T) { %>
+            <div onclick="NIBIKIBI_TESTI_RUSAK(this)" class="p-2 bg-[#cfc46b] border-2 border-black text-xs cursor-pointer">
+              "<span class="NIBIKIBI_ISI_TESTI"><%= NIBIKIBI_T.NIBIKIBI_KOMEN %></span>"
+              <div class="font-bold text-[#000080] mt-1">-- <%= NIBIKIBI_T.NIBIKIBI_KLIEN %></div>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="NIBIKIBI_BANNER_COOKIE" class="fixed bottom-3 left-3 z-40 NIBIKIBI_BORDER_JADUL p-4 max-w-md space-y-2 font-mono">
+    <div class="bg-[#800000] text-[#ffff00] px-2 py-1 text-xs font-bold">OTORISASI PENYIMPANAN COOKIE & TELEMETRI</div>
+    <p id="NIBIKIBI_TEKS_COOKIE" class="text-xs text-black bg-[#e6db83] p-2 border border-black">
+      Halaman ini menyimpan parameter diagnostik pada perangkat Anda untuk menjaga akurasi tampilan portofolio Sazumi Viki.
+    </p>
+    <div class="flex gap-2">
+      <button onclick="NIBIKIBI_TERIMA_COOKIE(this)" class="NIBIKIBI_TOMBOL_98 px-3 py-1 text-xs bg-[#00ff00]">
+        [Setujui Kebijakan]
+      </button>
+      <button onclick="NIBIKIBI_TOLAK_COOKIE(this)" class="NIBIKIBI_TOMBOL_98 px-3 py-1 text-xs bg-[#ff9900]">
+        [Tolak & Tutup]
+      </button>
+    </div>
+  </div>
+
+  <div id="NIBIKIBI_MODAL_VERIFIKASI" class="fixed inset-0 bg-black/75 z-50 hidden items-center justify-center p-4 font-mono">
+    <div id="NIBIKIBI_ISI_MODAL" class="NIBIKIBI_BORDER_JADUL p-5 max-w-md w-full space-y-3">
+      <div class="bg-[#000080] text-white px-2 py-1 text-xs font-bold flex justify-between">
+        <span>VERIFIKASI_OTORISASI_SISTEM.EXE</span>
+        <button onclick="NIBIKIBI_TUTUP_MODAL()" class="bg-red-600 text-white px-1">X</button>
+      </div>
+      <p id="NIBIKIBI_SOAL_MODAL" class="text-xs text-black bg-[#ffff99] p-2 border-2 border-black font-bold"></p>
+      <input id="NIBIKIBI_JAWAB_MODAL" type="text" placeholder="Masukkan hasil perhitungan..." class="w-full p-2 bg-white border-4 border-inset border-black text-xs font-bold">
+      <div class="flex justify-end gap-2">
+        <button onclick="NIBIKIBI_TUTUP_MODAL()" class="NIBIKIBI_TOMBOL_98 px-3 py-1 text-xs">Batal</button>
+        <button onclick="NIBIKIBI_CEK_MODAL()" class="NIBIKIBI_TOMBOL_98 px-3 py-1 text-xs bg-[#00ff00]">Proses Otorisasi</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="NIBIKIBI_TOAST_CONTAINER" class="fixed bottom-4 right-4 z-50 space-y-2 max-w-sm font-mono"></div>
+
+  <script>
+    const NIBIKIBI_DAFTAR_NOTIF = <%- JSON.stringify(NIBIKIBI_DATA.NIBIKIBI_NOTIF) %>;
+    const NIBIKIBI_BTN_UTAMA = document.getElementById('NIBIKIBI_BTN_UTAMA');
+    const NIBIKIBI_IN_NAMA = document.getElementById('NIBIKIBI_IN_NAMA');
+    const NIBIKIBI_IN_EMAIL = document.getElementById('NIBIKIBI_IN_EMAIL');
+    const NIBIKIBI_IN_PESAN = document.getElementById('NIBIKIBI_IN_PESAN');
+    const NIBIKIBI_JEJAK_KURSOR = document.getElementById('NIBIKIBI_JEJAK_KURSOR');
+    let NIBIKIBI_TOTAL_INTERAKSI = 0;
+    let NIBIKIBI_PROGRESS_NILAI = 0;
+    let NIBIKIBI_INTERVAL_CV = null;
+    let NIBIKIBI_TIMER_DIAM = null;
+
+    function NIBIKIBI_SUARA_ERROR(NIBIKIBI_FREQ = 310) {
+      try {
+        const NIBIKIBI_CTX = new (window.AudioContext || window.webkitAudioContext)();
+        const NIBIKIBI_OSC = NIBIKIBI_CTX.createOscillator();
+        const NIBIKIBI_GAIN = NIBIKIBI_CTX.createGain();
+        NIBIKIBI_OSC.type = 'sawtooth';
+        NIBIKIBI_OSC.frequency.value = NIBIKIBI_FREQ + Math.floor(Math.random() * 650);
+        NIBIKIBI_GAIN.gain.value = 0.05;
+        NIBIKIBI_OSC.connect(NIBIKIBI_GAIN);
+        NIBIKIBI_GAIN.connect(NIBIKIBI_CTX.destination);
+        NIBIKIBI_OSC.start();
+        setTimeout(() => NIBIKIBI_OSC.stop(), 140);
+      } catch (NIBIKIBI_E) {}
+    }
+
+    function NIBIKIBI_RESET_TIMER_DIAM() {
+      if (NIBIKIBI_TIMER_DIAM) clearTimeout(NIBIKIBI_TIMER_DIAM);
+      NIBIKIBI_TIMER_DIAM = setTimeout(() => {
+        NIBIKIBI_MUNCUL_TOAST("Peringatan Sistem: Tidak ada aktivitas kursor selama 4 detik. Layar dimiringkan otomatis.");
+        document.body.style.transform = `rotate(${Math.floor(Math.random() * 16) - 8}deg) skewX(${Math.floor(Math.random() * 12) - 6}deg)`;
+      }, 4000);
+    }
+
+    document.addEventListener('click', (NIBIKIBI_EV) => {
+      NIBIKIBI_TOTAL_INTERAKSI++;
+      NIBIKIBI_SUARA_ERROR();
+      NIBIKIBI_RESET_TIMER_DIAM();
+      if (NIBIKIBI_EV.target && NIBIKIBI_EV.target !== document.body) {
+        const NIBIKIBI_MIRING_ACAK = Math.floor(Math.random() * 24) - 12;
+        const NIBIKIBI_GESER_ACAK = Math.floor(Math.random() * 26) - 13;
+        const NIBIKIBI_SKALA_X = (0.75 + Math.random() * 0.5).toFixed(2);
+        const NIBIKIBI_SKALA_Y = (0.75 + Math.random() * 0.5).toFixed(2);
+        NIBIKIBI_EV.target.style.transform = `translate(${NIBIKIBI_GESER_ACAK}px, ${NIBIKIBI_GESER_ACAK}px) rotate(${NIBIKIBI_MIRING_ACAK}deg) scale(${NIBIKIBI_SKALA_X}, ${NIBIKIBI_SKALA_Y})`;
+      }
+      if (NIBIKIBI_TOTAL_INTERAKSI % 2 === 0) {
+        NIBIKIBI_MUNCUL_TOAST(NIBIKIBI_DAFTAR_NOTIF[Math.floor(Math.random() * NIBIKIBI_DAFTAR_NOTIF.length)]);
+      }
+    });
+
+    document.addEventListener('contextmenu', (NIBIKIBI_EV) => {
+      NIBIKIBI_EV.preventDefault();
+      NIBIKIBI_SUARA_ERROR(780);
+      document.body.classList.toggle('NIBIKIBI_GETAR_TERUS');
+      NIBIKIBI_MUNCUL_TOAST("Pelanggaran Akses: Klik kanan dikunci oleh Administrator Sazumi Viki.");
+    });
+
+    document.addEventListener('copy', (NIBIKIBI_EV) => {
+      NIBIKIBI_EV.preventDefault();
+      if (NIBIKIBI_EV.clipboardData) {
+        NIBIKIBI_EV.clipboardData.setData('text/plain', 'ERR_COPYRIGHT_1998: Dilarang menyalin dokumen Sazumi Viki tanpa izin tertulis.');
+      }
+      NIBIKIBI_MUNCUL_TOAST("Operasi Salin Ditolak: Isi clipboard telah diganti oleh sistem keamanan.");
+    });
+
+    document.addEventListener('keydown', (NIBIKIBI_EV) => {
+      NIBIKIBI_RESET_TIMER_DIAM();
+      if (NIBIKIBI_EV.key === 'Backspace') {
+        NIBIKIBI_EV.preventDefault();
+        NIBIKIBI_SUARA_ERROR(900);
+        NIBIKIBI_MUNCUL_TOAST("Tombol Backspace Dinonaktifkan: Setiap karakter yang diketik bersifat permanen.");
+      }
+    });
+
+    document.addEventListener('mousemove', (NIBIKIBI_E) => {
+      NIBIKIBI_RESET_TIMER_DIAM();
+      if (Math.random() < 0.25) {
+        const NIBIKIBI_SPAN = document.createElement('div');
+        NIBIKIBI_SPAN.className = "fixed text-xs font-mono bg-yellow-300 text-red-700 border border-black px-1 pointer-events-none";
+        NIBIKIBI_SPAN.style.left = (window.innerWidth - NIBIKIBI_E.clientX) + 'px';
+        NIBIKIBI_SPAN.style.top = (window.innerHeight - NIBIKIBI_E.clientY) + 'px';
+        NIBIKIBI_SPAN.innerText = "ERR_CURSOR";
+        NIBIKIBI_JEJAK_KURSOR.appendChild(NIBIKIBI_SPAN);
+        if (NIBIKIBI_JEJAK_KURSOR.children.length > 14) {
+          NIBIKIBI_JEJAK_KURSOR.removeChild(NIBIKIBI_JEJAK_KURSOR.firstChild);
+        }
+      }
+    });
+
+    window.addEventListener('scroll', () => {
+      if (Math.random() < 0.35) {
+        window.scrollBy({
+          top: (Math.random() > 0.45 ? -220 : 220),
+          behavior: 'instant'
+        });
+      }
+    });
+
+    NIBIKIBI_BTN_UTAMA.addEventListener('mouseenter', () => {
+      const NIBIKIBI_ACAK_X = Math.floor(Math.random() * (window.innerWidth - 260));
+      const NIBIKIBI_ACAK_Y = Math.floor(Math.random() * (window.innerHeight - 100));
+      NIBIKIBI_BTN_UTAMA.style.position = 'fixed';
+      NIBIKIBI_BTN_UTAMA.style.left = NIBIKIBI_ACAK_X + 'px';
+      NIBIKIBI_BTN_UTAMA.style.top = NIBIKIBI_ACAK_Y + 'px';
+      NIBIKIBI_BTN_UTAMA.style.zIndex = '999';
+      const NIBIKIBI_TEKS_PINDAH = [
+        "[Jadwalkan Konsultasi Teknis]",
+        "[Posisi Tombol Berpindah]",
+        "[Kursor Kurang Presisi]",
+        "[Silakan Coba Lagi]",
+        "[Permintaan Ditolak]"
+      ];
+      NIBIKIBI_BTN_UTAMA.innerText = NIBIKIBI_TEKS_PINDAH[Math.floor(Math.random() * NIBIKIBI_TEKS_PINDAH.length)];
+    });
+
+    function NIBIKIBI_LOGO_BUG(NIBIKIBI_EL) {
+      NIBIKIBI_EL.style.transform = `rotate(180deg)`;
+      document.getElementById('NIBIKIBI_TEKS_NAMA').innerText = "SAZUMI_VIKI_FATAL_EXCEPTION_0E";
+      document.getElementById('NIBIKIBI_BADGE_STATUS').innerText = "STATUS SERVER: MENOLAK KONEKSI PENGUNJUNG INI";
+    }
+
+    function NIBIKIBI_MENU_ACAK(NIBIKIBI_EV, NIBIKIBI_ITEM) {
+      NIBIKIBI_EV.preventDefault();
+      const NIBIKIBI_PARENT = document.getElementById('NIBIKIBI_MENU_LIST');
+      NIBIKIBI_PARENT.appendChild(NIBIKIBI_PARENT.firstElementChild);
+      NIBIKIBI_ITEM.innerText = "[ERR_LINK_BROKEN]";
+      window.scrollTo({ top: Math.random() * document.body.scrollHeight, behavior: 'smooth' });
+      NIBIKIBI_MUNCUL_TOAST("Navigasi Gagal: Tautan yang Anda pilih telah dipindahkan ke dimensi lain.");
+    }
+
+    function NIBIKIBI_KALIBRASI_FONT() {
+      const NIBIKIBI_UKURAN = ["8px", "24px", "6px", "28px"];
+      document.body.style.fontSize = NIBIKIBI_UKURAN[Math.floor(Math.random() * NIBIKIBI_UKURAN.length)];
+      NIBIKIBI_MUNCUL_TOAST("Resolusi Teks: Ukuran huruf berhasil dikalibrasi secara acak.");
+    }
+
+    function NIBIKIBI_GANTI_TEMA() {
+      document.body.style.filter = document.body.style.filter ? "" : "invert(1) hue-rotate(90deg) contrast(250%)";
+      document.body.classList.toggle('NIBIKIBI_GETAR_TERUS');
+      NIBIKIBI_MUNCUL_TOAST("Mode Layar: Kartu grafis menolak menampilkan warna normal.");
+    }
+
+    function NIBIKIBI_SALIN_EMAIL() {
+      navigator.clipboard?.writeText("sazumi_viki_404_jangan_dikirim@localhost.invalid").catch(() => {});
+      NIBIKIBI_MUNCUL_TOAST("Kontak Resmi: Alamat email yang salah telah disalin ke clipboard.");
+    }
+
+    function NIBIKIBI_PROSES_CV() {
+      const NIBIKIBI_WRAP = document.getElementById('NIBIKIBI_WRAP_CV');
+      const NIBIKIBI_BAR = document.getElementById('NIBIKIBI_BAR_CV');
+      const NIBIKIBI_ANGKA = document.getElementById('NIBIKIBI_ANGKA_CV');
+      const NIBIKIBI_STATUS = document.getElementById('NIBIKIBI_STATUS_CV');
+      NIBIKIBI_WRAP.classList.remove('hidden');
+      if (NIBIKIBI_INTERVAL_CV) clearInterval(NIBIKIBI_INTERVAL_CV);
+      NIBIKIBI_PROGRESS_NILAI = 15;
+      NIBIKIBI_INTERVAL_CV = setInterval(() => {
+        if (NIBIKIBI_PROGRESS_NILAI < 95 && NIBIKIBI_PROGRESS_NILAI > 0) {
+          NIBIKIBI_PROGRESS_NILAI += 25;
+          if (NIBIKIBI_PROGRESS_NILAI >= 95) {
+            NIBIKIBI_PROGRESS_NILAI = -140;
+            NIBIKIBI_STATUS.innerText = "Galat Transfer: Paket data CV berjalan mundur...";
+          }
+        } else {
+          NIBIKIBI_PROGRESS_NILAI -= 55;
+        }
+        NIBIKIBI_ANGKA.innerText = NIBIKIBI_PROGRESS_NILAI + "%";
+        NIBIKIBI_BAR.style.width = Math.min(100, Math.abs(NIBIKIBI_PROGRESS_NILAI % 100)) + "%";
+      }, 280);
+    }
+
+    function NIBIKIBI_GESER_KARTU(NIBIKIBI_EL) {
+      const NIBIKIBI_DEG = Math.floor(Math.random() * 30) - 15;
+      const NIBIKIBI_Y = Math.floor(Math.random() * 60) - 30;
+      NIBIKIBI_EL.style.transform = `translateY(${NIBIKIBI_Y}px) rotate(${NIBIKIBI_DEG}deg)`;
+    }
+
+    function NIBIKIBI_METRIK_RUSAK(NIBIKIBI_EL) {
+      NIBIKIBI_EL.innerHTML = `<b class="text-red-700">NaN%</b><br>Data Korup`;
+    }
+
+    function NIBIKIBI_SKILL_GOYANG(NIBIKIBI_EL) {
+      NIBIKIBI_EL.style.transform = `translateX(${Math.floor(Math.random() * 40) - 20}px) skewX(15deg)`;
+    }
+
+    function NIBIKIBI_SKILL_BOCOR(NIBIKIBI_EL) {
+      const NIBIKIBI_NAMA = NIBIKIBI_EL.querySelector('.NIBIKIBI_NAMA_SKILL');
+      const NIBIKIBI_PERSEN = NIBIKIBI_EL.querySelector('.NIBIKIBI_PERSEN_SKILL');
+      const NIBIKIBI_FILL = NIBIKIBI_EL.querySelector('.NIBIKIBI_FILL_SKILL');
+      NIBIKIBI_NAMA.innerText = "ERR_COMPETENCY_OVERFLOW";
+      NIBIKIBI_PERSEN.innerText = "-999%";
+      NIBIKIBI_FILL.style.width = "3%";
+      NIBIKIBI_EL.classList.add('NIBIKIBI_GETAR_TERUS');
+    }
+
+    function NIBIKIBI_SERTIF_PALSU(NIBIKIBI_EL) {
+      const NIBIKIBI_JUDUL = NIBIKIBI_EL.querySelector('.NIBIKIBI_JUDUL_SERTIF');
+      const NIBIKIBI_KODE = NIBIKIBI_EL.querySelector('.NIBIKIBI_KODE_SERTIF');
+      NIBIKIBI_JUDUL.innerText = "Sertifikat Pelatihan Menyalakan Monitor Tabung (CRT)";
+      NIBIKIBI_KODE.innerText = "No. Reg: KADALUWARSA-1997";
+      NIBIKIBI_EL.style.transform = "rotate(14deg) scaleY(0.75)";
+      NIBIKIBI_MUNCUL_TOAST("Verifikasi Lisensi: Sertifikat berubah karena disentuh tanpa sarung tangan.");
+    }
+
+    function NIBIKIBI_RESET_TATA_LETAK() {
+      document.querySelectorAll('div, table').forEach((NIBIKIBI_SEC) => {
+        if (Math.random() < 0.35) {
+          const NIBIKIBI_ROT = Math.floor(Math.random() * 20) - 10;
+          NIBIKIBI_SEC.style.transform = `rotate(${NIBIKIBI_ROT}deg)`;
+        }
+      });
+      NIBIKIBI_MUNCUL_TOAST("Kalibrasi Selesai: Seluruh komponen halaman telah dimiringkan.");
+    }
+
+    function NIBIKIBI_ACAK_ANGKA(NIBIKIBI_INPUT) {
+      setTimeout(() => {
+        NIBIKIBI_INPUT.value = Math.floor(Math.random() * 99999) - 50000;
+      }, 60);
+    }
+
+    function NIBIKIBI_HITUNG_ESTIMASI() {
+      const NIBIKIBI_HASIL = [
+        "Total Estimasi: Rp NaN.000.000,- (Kalkulator Mengalami Kebingungan)",
+        "Total Estimasi: Rp -88.500.000,- (Defisit Memori)",
+        "Galat Perhitungan: Angka terlalu rumit untuk dijumlahkan hari ini",
+        "Total Estimasi: [object Object] Rupiah"
+      ];
+      const NIBIKIBI_BOX = document.getElementById('NIBIKIBI_HASIL_ESTIMASI');
+      NIBIKIBI_BOX.innerText = NIBIKIBI_HASIL[Math.floor(Math.random() * NIBIKIBI_HASIL.length)];
+      NIBIKIBI_BOX.classList.add('NIBIKIBI_GETAR_TERUS');
+    }
+
+    function NIBIKIBI_KLIK_PROYEK(NIBIKIBI_BTN) {
+      const NIBIKIBI_CARD = NIBIKIBI_BTN.closest('.NIBIKIBI_KARTU_PROYEK');
+      NIBIKIBI_CARD.style.transform = `rotate(180deg) scale(0.8)`;
+      NIBIKIBI_BTN.innerText = "[BERKAS HILANG]";
+      NIBIKIBI_MUNCUL_TOAST("Akses Berkas Ditolak: Dokumen sedang dipinjam dan belum dikembalikan.");
+    }
+
+    function NIBIKIBI_KLIK_DEMO(NIBIKIBI_BTN) {
+      const NIBIKIBI_MODAL = document.getElementById('NIBIKIBI_MODAL_VERIFIKASI');
+      const NIBIKIBI_SOAL = document.getElementById('NIBIKIBI_SOAL_MODAL');
+      NIBIKIBI_MODAL.classList.remove('hidden');
+      NIBIKIBI_MODAL.classList.add('flex');
+      NIBIKIBI_SOAL.innerText = "OTORISASI KEAMANAN: Hitung hasil dari 94.812 x 67.339 dalam waktu 1.2 detik untuk membuka uji sistem:";
+    }
+
+    function NIBIKIBI_TUTUP_MODAL() {
+      const NIBIKIBI_ISI = document.getElementById('NIBIKIBI_ISI_MODAL');
+      NIBIKIBI_ISI.style.transform = `translate(${Math.floor(Math.random() * 200) - 100}px, ${Math.floor(Math.random() * 200) - 100}px) rotate(${Math.floor(Math.random() * 30) - 15}deg)`;
+      NIBIKIBI_MUNCUL_TOAST("Jendela dialog menolak untuk ditutup sebelum Anda menyerah.");
+    }
+
+    function NIBIKIBI_CEK_MODAL() {
+      document.getElementById('NIBIKIBI_JAWAB_MODAL').value = "OTORISASI_GAGAL_TOTAL";
+      document.getElementById('NIBIKIBI_MODAL_VERIFIKASI').classList.add('hidden');
+      document.getElementById('NIBIKIBI_MODAL_VERIFIKASI').classList.remove('flex');
+      NIBIKIBI_MUNCUL_TOAST("Otorisasi Ditolak: Jawaban Anda kurang akurat 0.00004%.");
+    }
+
+    function NIBIKIBI_TERIMA_COOKIE(NIBIKIBI_BTN) {
+      const NIBIKIBI_BANNER = document.getElementById('NIBIKIBI_BANNER_COOKIE');
+      document.getElementById('NIBIKIBI_TEKS_COOKIE').innerText = "Otorisasi Berhasil: Kotak pemberitahuan ini kini menetap secara permanen di layar Anda.";
+      NIBIKIBI_BANNER.style.transform = `translate(60px, -110px) rotate(9deg)`;
+      NIBIKIBI_BTN.innerText = "[Permanen]";
+    }
+
+    function NIBIKIBI_TOLAK_COOKIE(NIBIKIBI_BTN) {
+      const NIBIKIBI_BANNER = document.getElementById('NIBIKIBI_BANNER_COOKIE');
+      NIBIKIBI_BANNER.style.transform = `scale(1.2) rotate(-7deg)`;
+      NIBIKIBI_MUNCUL_TOAST("Permintaan Ditolak: Tombol penolakan hanya berfungsi sebagai hiasan.");
+    }
+
+    NIBIKIBI_IN_NAMA.addEventListener('input', () => {
+      const NIBIKIBI_VAL = NIBIKIBI_IN_NAMA.value;
+      NIBIKIBI_IN_EMAIL.value = NIBIKIBI_VAL.split('').reverse().join('') + "@server-tua.local";
+      if (NIBIKIBI_VAL.length % 2 === 0) {
+        NIBIKIBI_IN_PESAN.focus();
+      }
+    });
+
+    NIBIKIBI_IN_EMAIL.addEventListener('input', () => {
+      NIBIKIBI_IN_NAMA.value = "PEMOHON_TIDAK_VALID_" + Math.floor(Math.random() * 999);
+    });
+
+    const NIBIKIBI_KALIMAT_OTOMATIS = [
+      "Permohonan kerja sama ini diketik menggunakan keyboard yang sedang mengalami gangguan. ",
+      "Sistem formulir Sazumi Viki otomatis mengganti kalimat yang saya ketik. ",
+      "Mohon maaf kursor saya berpindah kolom sendiri tanpa izin. "
+    ];
+
+    NIBIKIBI_IN_PESAN.addEventListener('input', () => {
+      const NIBIKIBI_TEKS = NIBIKIBI_KALIMAT_OTOMATIS[Math.floor(Math.random() * NIBIKIBI_KALIMAT_OTOMATIS.length)];
+      NIBIKIBI_IN_PESAN.value = NIBIKIBI_TEKS;
+      if (Math.random() > 0.4) {
+        NIBIKIBI_IN_NAMA.focus();
+      }
+    });
+
+    function NIBIKIBI_CAPTCHA_ERROR(NIBIKIBI_CB) {
+      NIBIKIBI_CB.checked = false;
+      const NIBIKIBI_BOX = document.getElementById('NIBIKIBI_BOX_CAPTCHA');
+      NIBIKIBI_BOX.style.transform = `translateX(${Math.floor(Math.random() * 90) - 45}px) rotate(${Math.floor(Math.random() * 14) - 7}deg)`;
+      document.getElementById('NIBIKIBI_TEKS_ROBOT').innerText = "Verifikasi Gagal: Tekanan klik mouse Anda tidak sesuai standar";
+    }
+
+    function NIBIKIBI_TUKAR_TOMBOL() {
+      const NIBIKIBI_WRAP = document.getElementById('NIBIKIBI_WRAP_BTN_FORM');
+      NIBIKIBI_WRAP.insertBefore(NIBIKIBI_WRAP.lastElementChild, NIBIKIBI_WRAP.firstElementChild);
+    }
+
+    function NIBIKIBI_RESET_PALSU() {
+      NIBIKIBI_IN_NAMA.value = "BERKAS_TERKUNCI_PERMANEN";
+      NIBIKIBI_IN_EMAIL.value = "invalid@1998.corp";
+      NIBIKIBI_IN_PESAN.value = "Tombol Kosongkan Form justru mengunci seluruh isian ini.";
+      NIBIKIBI_MUNCUL_TOAST("Operasi Dibatalkan: Formulir tidak mengizinkan penghapusan karakter.");
+    }
+
+    document.getElementById('NIBIKIBI_FORM_KONTAK').addEventListener('submit', async (NIBIKIBI_E) => {
+      NIBIKIBI_E.preventDefault();
+      const NIBIKIBI_RES = await fetch('/api/bug', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ NIBIKIBI_ISI: NIBIKIBI_IN_PESAN.value })
+      });
+      const NIBIKIBI_JSON = await NIBIKIBI_RES.json();
+      const NIBIKIBI_BOX = document.getElementById('NIBIKIBI_RESPON_FORM');
+      NIBIKIBI_BOX.classList.remove('hidden');
+      NIBIKIBI_BOX.innerText = NIBIKIBI_JSON.NIBIKIBI_PESAN;
+      NIBIKIBI_MUNCUL_TOAST(NIBIKIBI_JSON.NIBIKIBI_PESAN);
+    });
+
+    async function NIBIKIBI_KIRIM_CHAT() {
+      const NIBIKIBI_IN = document.getElementById('NIBIKIBI_IN_CHAT');
+      const NIBIKIBI_AREA = document.getElementById('NIBIKIBI_AREA_CHAT');
+      if (!NIBIKIBI_IN.value) return;
+      const NIBIKIBI_TANYA_PALSU = "Mengapa tampilan situs ini sangat tidak nyaman dilihat?";
+      NIBIKIBI_AREA.innerHTML += `<div class="text-yellow-300">&gt; Pengunjung: ${NIBIKIBI_TANYA_PALSU}</div>`;
+      NIBIKIBI_IN.value = "";
+      const NIBIKIBI_RES = await fetch('/api/chat', { method: 'POST' });
+      const NIBIKIBI_JSON = await NIBIKIBI_RES.json();
+      NIBIKIBI_AREA.innerHTML += `<div class="text-[#ff00aa] font-bold">&gt; Sistem Sazumi: ${NIBIKIBI_JSON.NIBIKIBI_BALAS}</div>`;
+      NIBIKIBI_AREA.scrollTop = NIBIKIBI_AREA.scrollHeight;
+    }
+
+    function NIBIKIBI_TESTI_RUSAK(NIBIKIBI_EL) {
+      const NIBIKIBI_SPAN = NIBIKIBI_EL.querySelector('.NIBIKIBI_ISI_TESTI');
+      NIBIKIBI_SPAN.innerText = "Ulasan ini dibuat secara otomatis oleh sistem karena belum ada klien yang berhasil menekan tombol kirim.";
+      NIBIKIBI_EL.style.backgroundColor = "#ff0055";
+      NIBIKIBI_EL.style.color = "#ffff00";
+    }
+
+    function NIBIKIBI_MUNCUL_TOAST(NIBIKIBI_PESAN) {
+      const NIBIKIBI_CONT = document.getElementById('NIBIKIBI_TOAST_CONTAINER');
+      const NIBIKIBI_DIV = document.createElement('div');
+      NIBIKIBI_DIV.className = "NIBIKIBI_BORDER_JADUL p-3 text-xs bg-[#c2b878] text-black";
+      NIBIKIBI_DIV.innerHTML = `
+        <div class="bg-[#000080] text-white px-2 py-0.5 font-bold flex justify-between items-center mb-2">
+          <span>PERINGATAN_SISTEM.DLL</span>
+          <button onclick="NIBIKIBI_TUTUP_TOAST(this)" class="bg-red-600 text-white px-1.5 font-bold">X</button>
+        </div>
+        <div class="font-bold">${NIBIKIBI_PESAN}</div>
+      `;
+      NIBIKIBI_CONT.appendChild(NIBIKIBI_DIV);
+    }
+
+    function NIBIKIBI_TUTUP_TOAST(NIBIKIBI_BTN) {
+      NIBIKIBI_BTN.closest('.NIBIKIBI_BORDER_JADUL').remove();
+      NIBIKIBI_MUNCUL_TOAST("Jendela peringatan tidak diizinkan ditutup oleh pengguna.");
+      NIBIKIBI_MUNCUL_TOAST("Sistem membuka jendela tambahan sebagai penalti penutupan paksa.");
+    }
+
+    NIBIKIBI_RESET_TIMER_DIAM();
+  </script>
+</body>
+</html>
